@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space News Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Stay updated with the latest space news and discoveries from various sources around the world.">
+</head>
+<body>
+    <nav>
+        <div class="header obj-width">
+            <a class="logo" href="index.html">Space News</a>
+            <div class="filters">
+                <div class="filter-container">
+                    <!-- Sorting Filter -->
+                    <label for="sortDropdown">Sorting options</label>
+                    <select id="sortDropdown">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="alphabetical">Alphabetical</option>
+                    </select>
+                </div>
+        
+                <div class="filter-container">
+                    <!-- Source Filter -->
+                    <label for="sourceDropdown">Source filters</label>
+                    <select id="sourceDropdown">
+                    </select>
+                </div>
+                <div class="filter-container">
+                    <!-- Source Filter -->
+                    <label for="categoryDropdown">Category filters</label>
+                    <select id="categoryDropdown">
+                       
+                    </select>
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search news here..." id="search-input">
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="obj-width" id="blog-container">
+        <!-- Articles will be loaded here -->
+    </main>
+    
+    <!-- Pagination Container -->
+    <div id="pagination">
+        <button class="pagination-btn" id="prev-btn">Previous</button>
+        <span id="page-number">Page 1</span>
+        <button class="pagination-btn" id="next-btn">Next</button>
+    </div>
+<!-- Modal for Article Details -->
+<div id="article-modal" class="modal">
+    <div class="modal-content" id="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+    </div>
+</div>
+
+  
+
+    <!-- Load JavaScript files -->
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

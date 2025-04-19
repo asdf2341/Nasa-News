@@ -1,0 +1,252 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styling */
+body {
+    position: relative;
+    background-color: #0a0a1a; /* Deep space blue background */
+    color: #fff; /* White text color for contrast */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Global container width */
+.obj-width {
+    max-width: 2500px;
+    margin: auto;
+}
+
+/* Navigation */
+nav {
+    background-color: #2a2a45; /* Dark blue-grey */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0;
+}
+
+.header .logo {
+    color: #fff; /* White text for logo */
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+}
+
+#search-input {
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333; /* Dark text for input */
+    background-color: #fff; /* Light background for input */
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #00b4cc; /* Neon blue for button */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Filters Section */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px ;
+    gap: 20px; /* Increase spacing between filter elements */
+    border-radius: 10px;
+}
+
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #fff; /* White text for labels */
+}
+
+select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc; /* Light border for select dropdown */
+    width: 180px;
+    cursor: pointer;
+    background-color: #2b2b44; /* Dark background for select dropdown */
+    color: #fff; /* White text inside select */
+}
+
+/* Blog Container */
+#blog-container {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Blog Cards */
+.blog-card {
+    width: 350px;
+    border: 1px solid #2d4c50; /* Dark teal border */
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 10px;
+    background-color: #1e1e2f; /* Dark background for blog cards */
+}
+
+.blog-card:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.blog-card h2 {
+    color: #fff; /* White text for title */
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.blog-card p {
+    font-size: 1.2rem;
+    padding-top: 0.7rem;
+    color: #bbb; /* Light gray for paragraph text */
+}
+
+.pub-date-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999; /* Light gray for publication date and author */
+}
+
+.pub-date,
+.author {
+    padding: 10px 0;
+}
+
+.blog-card h4 {
+    padding: 5px 0;
+    color: #007bff; /* Accent color for category tags */
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination-btn {
+    padding: 10px 20px;
+    background-color: #00b4cc; /* Accent color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#page-number {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Media Query for mobile responsiveness */
+@media(max-width: 500px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .navbar .logo {
+        font-size: 1.8rem;
+    }
+
+    #search-input {
+        width: 150px;
+        padding: 10px 10px;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+}
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #1e1e2f;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: white;
+}
+
+/* Loading Effect */
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #bbb;
+}
+.no-news {
+    text-align: center;
+    font-size: 20px;
+    color: #bbb;
+    margin-top: 20px;
+}
+
